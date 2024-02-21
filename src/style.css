@@ -16,7 +16,7 @@ h1 {
     font-size: 300%;
     margin-left: 90px;
     font-size: -300px;
-    color: red;
+    color: rgb(184, 4, 4);
     z-index: 1;
 }
 .phrase {
@@ -43,11 +43,13 @@ h1 {
 }*/
 input {
     border-radius: 15px;
-    width: 540px;
+    outline: none;
+    width: 480px;
     height: 30px;
     position: absolute;
     margin-top: -70px;
     text-align: left;
+    letter-spacing: 2px;
     padding-left: 10px;
     font-family: "Passero One", sans-serif;
     z-index: 2;
@@ -55,7 +57,8 @@ input {
 }
 button {
     background-color: goldenrod;
-    width: 170px;
+    outline: none;
+    width: 120px;
     height: 37px;
     border-radius: 30px;
     margin-top: -70px;
@@ -66,12 +69,96 @@ button {
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+button:active {
+    transform: scale(0.9);
+  }  
+.user {
+    width: 37px;
+    height: 37px;
+    margin-top: -35px;
+    margin-left: 600px;
+    position: absolute;
+}
+.notification {
+    width: 37px;
+    height: 37px;
+    margin-top: -35px;
+    margin-left: 660px;
+    position: absolute;
+}
+.popular {
+    font-size: medium;
+    font-weight: bold;
+    color: cornsilk;
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 100px;
+}
+.posters {
+    display: flex;
+}
+.parasite {
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 100px;
+}
+.barbie {
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 250px;
+}
+.terrafier {
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 400px;
+}
+.sound {
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 550px;
+}
+.django {
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 700px;
+}
+.avatar {
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 850px;
+}
+.johnwick {
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 1000px;
+}
+.fracture {
+    width: 140px;
+    height: 180px;
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 1150px;
+}
 .byname {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: x-small;
     font-weight: bold;
     position: absolute;
-    margin-top: 500px;
+    margin-top: 545px;
     margin-left: 45%;
     color: white;
 }

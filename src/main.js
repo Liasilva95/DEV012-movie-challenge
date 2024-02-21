@@ -5,7 +5,7 @@ const title = document.querySelector(".searching");
 const button = document.querySelector("#doondooneButton");
 
 //searchMoviesByTitle("Inception");
-//searchMoviesById("tt3896198");
+//searchMoviesById("tt1287845");
 
 /*title.addEventListener("change", function(event) {
     const inputValue = event.target.value;
@@ -13,7 +13,7 @@ const button = document.querySelector("#doondooneButton");
     // Llama a la función de búsqueda por título
     const searchResultByTitle = searchMoviesByTitle("Inception");
     // Llama a la función de búsqueda por ID 
-    const movieId = "tt3896198";
+    const movieId = "tt1287845";
     const searchResultById = searchMoviesById(movieId);
        // const data = [searchResultByTitle, searchResultById];
      // Verifica si la respuesta es un arreglo
