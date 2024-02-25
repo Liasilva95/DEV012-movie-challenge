@@ -1,6 +1,5 @@
 import {searchMoviesByTitle, searchMoviesById} from './api.js';
 
-
 const title = document.querySelector(".searching");
 const button = document.querySelector("#doondooneButton");
 
@@ -30,7 +29,7 @@ const button = document.querySelector("#doondooneButton");
 // validar que el objeto sea correcto-- no estar vacio
 // mostrar peliculas-- si el paso es correcto.
 
-  title.addEventListener("change", function(event) {
+  title.addEventListener("input", function(event) {
     const inputValue = event.target.value;
     console.log("El valor introducido es:", inputValue);
   
@@ -61,11 +60,15 @@ const button = document.querySelector("#doondooneButton");
     .catch((error) => {
       console.error("Error al buscar películas por ID:", error);
     });
+
+    if (inputValue.length === 0) {
+        console.log('El campo de entrada está vacío.');
+    }
 });
 
 const searchResultsElement = document.getElementById("search-results");
 
-title.addEventListener("change", function(event) {
+title.addEventListener("input", function(event) {
   const inputValue = event.target.value;
   console.log("El valor introducido es:", inputValue);
 
@@ -88,18 +91,24 @@ title.addEventListener("change", function(event) {
       console.error("Error al buscar películas por título:", error);
     });
 
-    const movieId = "tt1287845"; // Reemplaza con el ID de la película deseada
+const movieId = inputValue; // Reemplaza con el ID de la película deseada
 
 searchMoviesById(movieId)
   .then((movieDetails) => {
-    document.getElementById("movie-title").textContent = movieDetails.Title;
-    document.getElementById("movie-plot").textContent = movieDetails.Plot;
-    document.getElementById("movie-poster").src = movieDetails.Poster;
-    document.getElementById("movie-trama").src = movieDetails.Plot;
+    searchResultsElement.innerHTML = ""; // Limpia resultados anteriores antes de mostrar los nuevos
+
+   const movieElement = document.createElement("div");
+   movieElement.innerHTML = `
+      <h2>${movieDetails.Title}</h2>
+      <p>Year: ${movieDetails.Year}</p>
+      <p>Genre: ${movieDetails.Genre}</p>
+      <p>Plot: ${movieDetails.Plot}</p>
+      <img src="${movieDetails.Poster}" alt="${movieDetails.Title} Poster">
+   `
+   searchResultsElement.appendChild(movieElement);
   })
   .catch((error) => {
     console.error("Error al buscar película por ID:", error);
   });
-
 });
 
