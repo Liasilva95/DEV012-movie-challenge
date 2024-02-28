@@ -1,52 +1,27 @@
-import {searchMoviesByTitle, searchMoviesById} from './api.js';
+import { searchMoviesByTitle, searchMoviesById } from "./api.js";
 
 const title = document.querySelector(".searching");
 const button = document.querySelector("#doondooneButton");
+let movieId;
 
-//searchMoviesByTitle("Inception");
-//searchMoviesById("tt1287845");
+title.addEventListener("input", function (event) {
+  const inputValue = event.target.value;
+  console.log("El valor introducido es:", inputValue);
 
-/*title.addEventListener("change", function(event) {
-    const inputValue = event.target.value;
-    console.log("El valor introducido es:", inputValue);
-    // Llama a la función de búsqueda por título
-    const searchResultByTitle = searchMoviesByTitle("Inception");
-    // Llama a la función de búsqueda por ID 
-    const movieId = "tt1287845";
-    const searchResultById = searchMoviesById(movieId);
-       // const data = [searchResultByTitle, searchResultById];
-     // Verifica si la respuesta es un arreglo
-     if (Array.isArray(searchResultByTitle) || Array.isArray(searchResultById)) {
+  // Llama a la función de búsqueda por título
+  searchMoviesByTitle(inputValue)
+    .then((searchResultByTitle) => {
+      // Verifica si el resultado es un arreglo
+      if (Array.isArray(searchResultByTitle)) {
         console.log("La respuesta es un arreglo.");
-    } else {
+      } else {
         console.log("La respuesta no es un arreglo.");
-    }
-}); */
-// identificar el titulo y el id
-// variables (titulo a buscar) input
-// ejecutar mis dos funciones de busqueda. 
-// validar cual de las 2 funciones me devuelve un arreglo.
-// validar que el objeto sea correcto-- no estar vacio
-// mostrar peliculas-- si el paso es correcto.
+      }
+    })
+    .catch((error) => {
+      console.error("Error al buscar películas por título:", error);
+    });
 
-  title.addEventListener("input", function(event) {
-    const inputValue = event.target.value;
-    console.log("El valor introducido es:", inputValue);
-  
-    // Llama a la función de búsqueda por título
-    searchMoviesByTitle(inputValue)
-      .then((searchResultByTitle) => {
-        // Verifica si el resultado es un arreglo
-        if (Array.isArray(searchResultByTitle)) {
-          console.log("La respuesta es un arreglo.");
-        } else {
-          console.log("La respuesta no es un arreglo.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error al buscar películas por título:", error);
-      });
-  
   const movieId = inputValue; // Usa el valor ingresado como ID
   searchMoviesById(movieId)
     .then((searchResultById) => {
@@ -60,15 +35,20 @@ const button = document.querySelector("#doondooneButton");
     .catch((error) => {
       console.error("Error al buscar películas por ID:", error);
     });
+});
 
-    if (inputValue.length === 0) {
-        console.log('El campo de entrada está vacío.');
-    }
+button.addEventListener("click", function () {
+  const inputValue = title.value.trim(); // Obtener el valor del campo y eliminar espacios en blanco al principio y al final
+
+  if (inputValue === "") {
+    alert("El campo no puede estar vacío."); // Mostrar alerta si el campo está vacío
+    title.focus(); // Hacer foco en el campo para que el usuario pueda ingresar datos
+  }
 });
 
 const searchResultsElement = document.getElementById("search-results");
 
-title.addEventListener("input", function(event) {
+title.addEventListener("input", function (event) {
   const inputValue = event.target.value;
   console.log("El valor introducido es:", inputValue);
 
@@ -91,24 +71,33 @@ title.addEventListener("input", function(event) {
       console.error("Error al buscar películas por título:", error);
     });
 
-const movieId = inputValue; // Reemplaza con el ID de la película deseada
+  movieId = inputValue; // Reemplaza con el ID de la película deseada
 
-searchMoviesById(movieId)
-  .then((movieDetails) => {
-    searchResultsElement.innerHTML = ""; // Limpia resultados anteriores antes de mostrar los nuevos
+  searchMoviesById(movieId)
+    .then((movieDetails) => {
+      searchResultsElement.innerHTML = ""; // Limpia resultados anteriores antes de mostrar los nuevos
 
-   const movieElement = document.createElement("div");
-   movieElement.innerHTML = `
+      const movieElement = document.createElement("div");
+      movieElement.innerHTML = `
       <h2>${movieDetails.Title}</h2>
       <p>Year: ${movieDetails.Year}</p>
       <p>Genre: ${movieDetails.Genre}</p>
       <p>Plot: ${movieDetails.Plot}</p>
       <img src="${movieDetails.Poster}" alt="${movieDetails.Title} Poster">
-   `
-   searchResultsElement.appendChild(movieElement);
-  })
-  .catch((error) => {
-    console.error("Error al buscar película por ID:", error);
-  });
+   `;
+      searchResultsElement.appendChild(movieElement);
+    })
+    .catch((error) => {
+      console.error("Error al buscar película por ID:", error);
+    });
 });
 
+//searchMoviesByTitle("Inception");
+//searchMoviesById("tt1287845");
+
+// identificar el titulo y el id
+// variables (titulo a buscar) input
+// ejecutar mis dos funciones de busqueda.
+// validar cual de las 2 funciones me devuelve un arreglo.
+// validar que el objeto sea correcto-- no estar vacio
+// mostrar peliculas-- si el paso es correcto.

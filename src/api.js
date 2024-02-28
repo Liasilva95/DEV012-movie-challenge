@@ -5,14 +5,13 @@
 function searchMoviesByTitle(title) {
   const apiKey = "ee33331b"; // clave API de OMDb
   const apiUrl = `http://www.omdbapi.com/?s=${title}&apikey=${apiKey}`; //Interpolacion.
-  
-    return fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-   
+
+  return fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
       if (data.Response === "True") {
         data.Search.forEach((movie) => {
-        // Itera a través de los titulos y muestra los detalles de c/película
+          // Itera a través de los titulos y muestra los detalles de c/película
           console.log("Título:", movie.Title);
           console.log("Año:", movie.Year);
           console.log("Tipo:", movie.Type);
@@ -25,15 +24,15 @@ function searchMoviesByTitle(title) {
         //console.log("No se encontró información para la película:", title);
       }
     })
-     .catch((error) => {
+    .catch((error) => {
       console.log("Error al obtener datos de la API:", error);
     });
 }
 
-// FUNCTION BY YEAR
+// FUNCTION BY ID
 function searchMoviesById(ID) {
   const apiKey = "ee33331b"; // Clave API de OMDb
-//protocolo(http-https), nombre del dominio, path name(opcional), query params(¿) nombre del parametro=valor.
+  //protocolo(http-https), nombre del dominio, path name(opcional), query params(¿) nombre del parametro=valor.
   const apiUrl = `http://www.omdbapi.com/?i=${ID}&apikey=${apiKey}`;
 
   return fetch(apiUrl)
