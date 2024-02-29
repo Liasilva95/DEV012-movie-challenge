@@ -1,188 +1,189 @@
 body {
-    background-image: url(./IMAGENES/HORRORMOVIES.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: 100%;
-    height: 100%;
+  background-image: url(./IMAGENES/HORRORMOVIES.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 h1 {
-    font-family: "Sirin Stencil", sans-serif;
-    margin-top: 0px;
-    text-align: left;
-    font-size: 300%;
-    margin-left: 90px;
-    font-size: -300px;
-    color: rgb(184, 4, 4);
-    z-index: 1;
+  font-family: "Sirin Stencil", sans-serif;
+  margin-top: 0px;
+  text-align: left;
+  font-size: 300%;
+  margin-left: 90px;
+  font-size: -300px;
+  color: rgb(184, 4, 4);
+  z-index: 1;
 }
 .phrase {
-    font-size: x-small;
-    font-weight: bolder;
-    font-family: "Sirin Stencil", sans-serif;
-    margin-top: -40px;
-    text-align: left;
-    margin-left: 140px;
-    color: cornsilk;
+  font-size: x-small;
+  font-weight: bolder;
+  font-family: "Sirin Stencil", sans-serif;
+  margin-top: -40px;
+  text-align: left;
+  margin-left: 140px;
+  color: cornsilk;
 }
 input {
-    border-radius: 15px;
-    outline: none;
-    width: 480px;
-    height: 30px;
-    position: absolute;
-    margin-top: -65px;
-    text-align: left;
-    letter-spacing: 2px;
-    padding-left: 10px;
-    font-family: "Passero One", sans-serif;
-    z-index: 2;
-    background-color: cornsilk;
+  border-radius: 15px;
+  outline: none;
+  width: 480px;
+  height: 30px;
+  position: absolute;
+  margin-top: -65px;
+  text-align: left;
+  letter-spacing: 2px;
+  padding-left: 10px;
+  font-family: "Passero One", sans-serif;
+  z-index: 2;
+  background-color: cornsilk;
 }
 button {
-    background-color: goldenrod;
-    outline: none;
-    width: 120px;
-    height: 37px;
-    border-radius: 30px;
-    margin-top: -65px;
-    margin-left: 390px;
-    z-index: 2;
-    color: cornsilk;
-    position: absolute;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: goldenrod;
+  outline: none;
+  width: 120px;
+  height: 37px;
+  border-radius: 30px;
+  margin-top: -65px;
+  margin-left: 390px;
+  z-index: 2;
+  color: cornsilk;
+  position: absolute;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 button:active {
-    transform: scale(0.9);
-}  
+  transform: scale(0.9);
+}
 .user {
-    width: 30px;
-    height: 30px;
-    margin-top: -25px;
-    margin-left: 600px;
-    position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-top: -25px;
+  margin-left: 600px;
+  position: absolute;
 }
 .notification {
-    width: 30px;
-    height: 30px;
-    margin-top: -24px;
-    margin-left: 650px;
-    position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-top: -24px;
+  margin-left: 650px;
+  position: absolute;
 }
 #search-results {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 15px;
-    margin-left: 30px;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 15px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 img {
-    width: 170px;
-    height: 210px;
-    margin-top: -3px;
+  width: 170px;
+  height: 210px;
+  margin-top: -3px;
 }
 img:hover {
-    box-shadow: 0 5px 15px rgb(0, 0, 0);
-    transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgb(0, 0, 0);
+  transform: translateY(-5px);
 }
 h2 {
-    font-size: x-small;
-    font-family: "Pasero One", sans-serif;
-    color: gold;
-    width: 170px;
-    height: 22px;
-    overflow: auto;
+  font-size: x-small;
+  font-family: "Pasero One", sans-serif;
+  color: gold;
+  width: 170px;
+  height: 22px;
+  overflow: auto;
 }
 p {
-    font-size: x-small;
-    color: cornsilk;
-    font-family: "Pasero One", sans-serif;
-    margin-top: -5px;
-    width: 170px;
+  font-size: x-small;
+  color: cornsilk;
+  font-family: "Pasero One", sans-serif;
+  margin-top: -5px;
+  width: 170px;
 }
 .popular {
-    font-size: large;
-    font-weight: bold;
-    font-family: "Sirin Stencil", sans-serif;
-    letter-spacing: 2px;
-    color: white;
-    position: absolute;
-    margin-top: -38px;
-    margin-left: 10px;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Sirin Stencil", sans-serif;
+  letter-spacing: 2px;
+  color: white;
+  position: absolute;
+  margin-top: -38px;
+  margin-left: 10px;
 }
 .posters {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 16px;
-    margin-left: 30px;
-    margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 16px;
+  margin-left: 30px;
+  margin-top: 55px;
 }
 .byname {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: x-small;
-    font-weight: bold;
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 45%;
-    color: white;
-    
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: x-small;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 45%;
+  color: white;
 }
 
 /*DISEÑO MOVIL*/
 @media (max-width: 768px) {
-    body {
-      background-image: url("./IMAGENES/PHONE.jpg");
-    }
-    h1 {
-      font-size: 420%;
-      margin-left: 25px;
-    }
-    input {
-        width: 450px;
-        margin-left: 300px;
-        margin-top: -120px;
-    }
-    button {
-        margin-left: 650px;
-        margin-top: -120px;
-    }
-    .popular {
-        width: 400px;
-    }
-    #search-results {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 40px;
-        width: 930px;
-        height: auto;
-    }
-    img {
-        width: 100%;
-        max-width: 370px;
-        height: auto;
-        margin-top: -3px;
-    }
-    .posters {
-        width: 930px;
-        height: auto;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 40px;
-    }
-    h2 {
-        width: 400px;
-        font-size: medium;
-    }
-    p {
-        width: 100%;
-        font-size: large;
-    }
+  body {
+    background-image: url("./IMAGENES/PHONE.jpg");
+  }
+  h1 {
+    font-size: 420%;
+    margin-left: 25px;
+  }
+  input {
+    width: 450px;
+    margin-left: 300px;
+    margin-top: -120px;
+  }
+  button {
+    margin-left: 650px;
+    margin-top: -120px;
+  }
+  .popular {
+    width: 400px;
+  }
+  #search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    width: 930px;
+    height: auto;
+  }
+  img {
+    width: 100%;
+    max-width: 370px;
+    height: auto;
+    margin-top: -3px;
+  }
+  .posters {
+    width: 930px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  h2 {
+    width: 400px;
+    font-size: medium;
+  }
+  p {
+    width: 100%;
+    font-size: large;
+  }
 }

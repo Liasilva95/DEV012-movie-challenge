@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "fetch-mock": "^9.11.0"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }

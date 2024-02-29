@@ -65,11 +65,13 @@ En resumen, nuestro producto resuelve el problema de búsqueda y visualización 
 
 ## 4. Prototipo de baja y alta fidelidad
 
+![Prototipo de baja fidelidad](./src/IMG%20README/BAJA%20FIDELIDAD.png)
+![Prototipo de alta fidelidad](./src/IMG%20README/ALTA%20FIDELIDAD.png)
+![Esquema de colores de referencia para idear la interfaz del usuario](./src/IMG%20README/ESQUEMA%20DE%20COLORES.png)
+
 ## 5. Historias de usuario
 
-## Contenido de referencia
-
-- [Fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
-- [Math.random](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/random)
+1. Como usuaria debo poder buscar películas a través de su TÍTULO con una palabra en el buscador, y me devolverá el titulo, año y poster de las películas que encuentre.
+2. Como usuaria debo poder buscar películas por su ID introduciendo en el buscador y me devuelva en la interfaz el titulo, genero, año, trama y poster de la película.
 
 Diviertete e ingresa tu titulo o ID de tu pelicula favorita y explora nuestro buscador. ¡a empezar esta aventura 🎬!

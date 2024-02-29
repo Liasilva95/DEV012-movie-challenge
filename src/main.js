@@ -6,7 +6,7 @@ let movieId;
 
 title.addEventListener("input", function (event) {
   const inputValue = event.target.value;
-  console.log("El valor introducido es:", inputValue);
+  //console.log("El valor introducido es:", inputValue);
 
   // Llama a la función de búsqueda por título
   searchMoviesByTitle(inputValue)
@@ -30,7 +30,7 @@ title.addEventListener("input", function (event) {
         console.log("La respuesta no es un arreglo.");
       } else {
         console.log("La respuesta es un arreglo.");
-      }
+    }
     })
     .catch((error) => {
       console.error("Error al buscar películas por ID:", error);
@@ -53,7 +53,7 @@ title.addEventListener("input", function (event) {
   console.log("El valor introducido es:", inputValue);
 
   searchMoviesByTitle(inputValue)
-    .then((searchResults) => {
+    .then(function(searchResults)  {
       // Limpia los resultados anteriores antes de mostrar los nuevos
       searchResultsElement.innerHTML = "";
 
@@ -94,10 +94,3 @@ title.addEventListener("input", function (event) {
 
 //searchMoviesByTitle("Inception");
 //searchMoviesById("tt1287845");
-
-// identificar el titulo y el id
-// variables (titulo a buscar) input
-// ejecutar mis dos funciones de busqueda.
-// validar cual de las 2 funciones me devuelve un arreglo.
-// validar que el objeto sea correcto-- no estar vacio
-// mostrar peliculas-- si el paso es correcto.
